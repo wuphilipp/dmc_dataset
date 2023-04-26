@@ -1,0 +1,29 @@
+args:
+  seed: 0
+  domain_task: walker_stand
+  project: walker_data
+  warmstart_steps: 5000
+  max_steps: 1010001
+  checkpoint_interval: 10000
+  save_all_interval: 200000
+  discount: 0.99
+  energy_penalty_coef: 0.99
+  action_reward_observation: true
+  eval_episodes: 10
+  n_steps_lookahead: 10
+  control_timestep: 0.05
+  reduced_action_space: true
+  tqdm_bar: true
+  use_wandb: true
+algorithm: sac
+agent_config:
+  activation: gelu
+  actor_utd_ratio: 1
+  critic_utd_ratio: 1
+  critic_dropout_rate: 0.01
+  critic_layer_norm: true
+  hidden_dims:
+  - 256
+  - 256
+  - 256
+job_name: job
